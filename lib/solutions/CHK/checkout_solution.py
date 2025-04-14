@@ -86,6 +86,7 @@ class CheckoutSolution:
         total += counts.get("L", 0) * 90
         total += counts.get("O", 0) * 10
         total += counts.get("R", 0) * 50
+        total += counts.get("Q", 0) * 30
         total += counts.get("S", 0) * 30
         total += counts.get("T", 0) * 20
         total += counts.get("W", 0) * 20
