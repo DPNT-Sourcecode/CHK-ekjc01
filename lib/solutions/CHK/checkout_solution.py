@@ -74,10 +74,6 @@ class CheckoutSolution:
         payable_u = (u // 4) * 3 + (u % 4)
         total += payable_u * 40
 
-       # W's Offer: 2X, 1S free
-        free_s = (counts.get("X", 0) // 2)
-        s = max(0, counts.get("S", 0) - free_s)
-        total += s * 20
         
         # Remaining items at regular price
 
@@ -99,3 +95,4 @@ class CheckoutSolution:
         total += counts.get("Z", 0) * 50
     
         return total
+
