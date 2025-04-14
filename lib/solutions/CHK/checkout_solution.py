@@ -21,7 +21,7 @@ class CheckoutSolution:
         b = counts.get("B", 0)
         total += (b // 2) * 45 + (b % 2) * 30
 
-       # H's Offer: 10H for 80, 5H for 45, remainder at 10
+       # H's Offer: 10H for 80, 5H for 45, rmd at 10
         h = counts.get("H", 0)
         total += (h // 10) * 80
         h = h % 10
@@ -35,7 +35,7 @@ class CheckoutSolution:
         q = counts.get("Q", 0)
         total += (q // 3) * 80 + (q % 3) * 30
 
-       # V's Offer: 3V for 130, 2V for 90, remainder at 50
+       # V's Offer: 3V for 130, 2V for 90, rmd at 50
         v = counts.get("V", 0)
         total += (v // 3) * 130
         v %= 3
