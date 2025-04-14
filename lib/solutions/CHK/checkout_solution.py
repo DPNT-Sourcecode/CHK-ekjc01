@@ -9,7 +9,7 @@ class CheckoutSolution:
         counts = Counter(skus)
         total = 0
         
-       # MULTI-ITEM SPECIAL OFFERS
+       # "MULTI-ITEM SPECIAL" OFFERS
 
        # A's Offer: 5 for 200, 3 for 130, rmd 50 each
         a = counts.get("A", 0)
@@ -95,3 +95,4 @@ class CheckoutSolution:
         total += counts.get("Z", 0) * 21
     
         return total
+
