@@ -74,7 +74,7 @@ class CheckoutSolution:
 
         group_items = ["S", "T", "X", "Y", "Z"]
         group_prices = {
-            "S": 30,
+            "S": 20,
             "T": 20,
             "X": 17,
             "Y": 20,
@@ -113,4 +113,5 @@ class CheckoutSolution:
         total += counts.get("Z", 0) * 21
     
         return total
+
 
