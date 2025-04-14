@@ -78,9 +78,9 @@ class CheckoutSolution:
         group_prices = {
             "S": 30,
             "T": 20,
-            "X": 90,
-            "Y": 10,
-            "Z": 50
+            "X": 17,
+            "Y": 20,
+            "Z": 21
         }
 
         group_pool = []
@@ -108,11 +108,11 @@ class CheckoutSolution:
         total += counts.get("L", 0) * 90
         total += counts.get("O", 0) * 10
         total += counts.get("R", 0) * 50
-        total += counts.get("S", 0) * 30
+        total += counts.get("S", 0) * 20
         total += counts.get("T", 0) * 20
         total += counts.get("W", 0) * 20
-        total += counts.get("X", 0) * 90
-        total += counts.get("Y", 0) * 10
-        total += counts.get("Z", 0) * 50
+        total += counts.get("X", 0) * 17
+        total += counts.get("Y", 0) * 20
+        total += counts.get("Z", 0) * 21
     
         return total
