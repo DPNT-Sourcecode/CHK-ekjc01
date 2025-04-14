@@ -44,6 +44,23 @@ class CheckoutSolution:
         total += counts.get("E", 0) * 40
         total += counts.get("E", 0) * 40
 
+        total += counts.get("C", 0) * 20
+        total += counts.get("D", 0) * 15
+        total += counts.get("E", 0) * 40
+        total += counts.get("G", 0) * 20
+        total += counts.get("I", 0) * 35
+        total += counts.get("J", 0) * 60
+        total += counts.get("K", 0) * 70
+        total += counts.get("L", 0) * 90
+        total += counts.get("N", 0) * 40
+        total += counts.get("R", 0) * 50
+        total += counts.get("S", 0) * 0  # already counted after W logic
+        total += counts.get("T", 0) * 20
+        total += counts.get("W", 0) * 20
+        total += counts.get("X", 0) * 17
+        total += counts.get("Y", 0) * 20
+        total += counts.get("Z", 0) * 21
+
     
         return total
 
