@@ -3,7 +3,7 @@ from collections import Counter
 class CheckoutSolution:
     def checkout(self, skus):
 
-        if not all(c in "ABCDEF" for c in skus):
+        if not all(c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" for c in skus):
             return -1
         
         counts = Counter(skus)
@@ -30,10 +30,18 @@ class CheckoutSolution:
         payable_f = (f // 3) * 2 + (f % 3)
         total += payable_f * 10
         
-        # Remaining items
+        # Remaining items at regular price
 
         total += counts.get("C", 0) * 20
         total += counts.get("D", 0) * 15
+        total += counts.get("E", 0) * 40
+        total += counts.get("G", 0) * 40
+        total += counts.get("E", 0) * 40
+        total += counts.get("E", 0) * 40
+        total += counts.get("E", 0) * 40
+        total += counts.get("E", 0) * 40
+        total += counts.get("E", 0) * 40
+        total += counts.get("E", 0) * 40
         total += counts.get("E", 0) * 40
 
     
