@@ -25,6 +25,11 @@ class CheckoutSolution:
         h = h % 10
         total += (h // 5) * 45 + (h % 5) * 10
 
+       # K's Offer: 2K for 150, standard at 80
+        k = counts.get("K", 0)
+        total += (k // 2) * 150 + (k % 2) * 80
+
+
        # P's Offer: 5P for 200
         p = counts.get("P", 0)
         total += (p // 5) * 200 + (p % 5) * 50
@@ -78,6 +83,7 @@ class CheckoutSolution:
 
         total += counts.get("C", 0) * 20
         total += counts.get("D", 0) * 15
+        total += counts.get("E", 0) * 40
         total += counts.get("G", 0) * 20
         total += counts.get("I", 0) * 35
         total += counts.get("J", 0) * 60
@@ -91,9 +97,3 @@ class CheckoutSolution:
         total += counts.get("Z", 0) * 50
     
         return total
-
-
-
-
-
-
