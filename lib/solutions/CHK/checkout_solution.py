@@ -17,13 +17,13 @@ class CheckoutSolution:
         total += (a // 5) * 200
         total += (remainder_a // 3) * 130 + (remainder_a % 3) * 50
 
-       # B's Offer: 2 B for 45, Standard Price is 30  
-        b = counts.get("B", 0)
-        total += (b // 2) * 45 + (b % 2) * 30
-
        # E's Offer: for every 2 Es, get 1 B free
         free_b = counts.get("E", 0) // 2
         counts["B"] = max(0, counts.get("B", 0) - free_b)
+
+       # B's Offer: 2 B for 45, Standard Price is 30  
+        b = counts.get("B", 0)
+        total += (b // 2) * 45 + (b % 2) * 30
 
        # F's Offer: for every 3 Fs, get one free
         f = counts.get("F", 0)
