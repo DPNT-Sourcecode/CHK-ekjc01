@@ -9,7 +9,7 @@ class CheckoutSolution:
         counts = Counter(skus)
         total = 0
         
-       # multi-item special offers
+       # MULTI-ITEM SPECIAL OFFERS
 
        # A's Offer: 5 for 200, 3 for 130, rmd 50 each
         a = counts.get("A", 0)
@@ -17,13 +17,31 @@ class CheckoutSolution:
         total += (a // 5) * 200
         total += (remainder_a // 3) * 130 + (remainder_a % 3) * 50
 
-       # B's Offer: 2 B for 45, Standard Price is 30  
+       # B's Offer: 2 B for 45, Standard Price 30  
         b = counts.get("B", 0)
         total += (b // 2) * 45 + (b % 2) * 30
 
-       
+       # H's Offer: 10H for 80, 5H for 45, remainder at 10
+        h = counts.get("H", 0)
+        total += (h // 10) * 80
+        h = h % 10
+        total += (h // 5) * 45 + (h % 5) * 10
 
-      # BUY X GET Y FREE OFFERS
+       # P's Offer: 5P for 200
+        p = counts.get("P", 0)
+        total += (p // 5) * 200 + (p % 5) * 50
+
+       # Q's Offer: 3Q for 80
+        q = counts.get("Q", 0)
+        total += (q // 3) * 80 + (q % 3) * 30
+
+       # V's Offer: 3V for 130, 2V for 90, remainder at 50
+        v = counts.get("V", 0)
+        total += (v // 3) * 130
+        v %= 3
+        total += (v // 2) * 90 + (v % 2) * 50
+
+      # "BUY X GET Y FREE" OFFERS
 
        # E's Offer: 2 Es, 1B free
         free_b = counts.get("E", 0) // 2
@@ -77,5 +95,3 @@ class CheckoutSolution:
         total += counts.get("Z", 0) * 21
     
         return total
-
-
