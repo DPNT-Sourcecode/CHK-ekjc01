@@ -10,21 +10,32 @@ class CheckoutSolution:
 
         total = 0
         
-        free_b = counts["E"] // 2
-        counts["B"] = max(0, counts["B"] - free_b)
+        free_b = counts.get["E"] // 2
+        counts["B"] = max(0, counts.get["B"] - free_b)
 
 
-        total += (counts["A" // 5]) * 200
-        remainder_a = counts["A"] % 5
+        total += (counts.get["A" // 5]) * 200
+        remainder_a = counts.get["A"] % 5
         total += (remainder_a // 3) * 130 + (remainder_a % 3) * 50
         
-        total += (counts["B"] // 2) * 45 + (counts["B"] % 2) * 30
-        total += counts["C"] * 20
-        total += counts["D"] * 15
-        total += counts["E"] * 40
+        total += (counts.get["B"] // 2) * 45 + (counts["B"] % 2) * 30
+        total += counts.get["C"] * 20
+        total += counts.get["D"] * 15
+        total += counts.get["E"] * 40
+
+        free_b = counts.get("E", 0) // 2
+        counts["B"] = max(0, counts.get("B", 0) - free_b)
+
+        a = counts.get("A", 0)
+        remainder_a = a % 5
+        total += (a // 5) * 200
+        total += (remainder_a // 3) * 130 + (remainder_a % 3) * 50
+
+        b = counts.get("B", 0)
+        total += (b // 2) * 45 + (b % 2) * 30
+
+        total += counts.get("C", 0) * 20
+        total += counts.get("D", 0) * 15
+        total += counts.get("E", 0) * 40
 
         return total
-
-
-
-
