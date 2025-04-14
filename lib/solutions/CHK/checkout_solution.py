@@ -35,8 +35,8 @@ class CheckoutSolution:
         total += (p // 5) * 200 + (p % 5) * 50
 
        # Q's Offer: 3Q for 80
-        q = counts.get("Q", 0)
-        total += (q // 3) * 80 + (q % 3) * 30
+        #q = counts.get("Q", 0)
+        #total += (q // 3) * 80 + (q % 3) * 30
 
        # V's Offer: 3V for 130, 2V for 90, rmd at 50
         v = counts.get("V", 0)
@@ -68,7 +68,7 @@ class CheckoutSolution:
        # R's Offer: 3R, 1 Q free
         free_q = counts.get("R", 0) // 3
         q = max(0, counts.get("Q", 0) - free_q)
-        total += q * 30 
+        total += (q // 3) * 80 + (q % 3) * 80 
 
        # U's Offer: 3U, 1U free
         u = counts.get("U", 0)
@@ -94,4 +94,5 @@ class CheckoutSolution:
         total += counts.get("Z", 0) * 50
     
         return total
+
 
