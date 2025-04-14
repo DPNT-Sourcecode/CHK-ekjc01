@@ -59,7 +59,7 @@ class CheckoutSolution:
        # I's Offer: 3I, 1 F free ()
         free_f = counts.get("I", 0) // 3
 
-       # N's Offer: 3N, 1 M free
+       # N's Offer: 3N, 1 M free (includes M standard price)
         free_m = counts.get("N", 0) // 3
         m = max(0, counts.get("M", 0) - free_m)
         total += m * 15
@@ -84,7 +84,6 @@ class CheckoutSolution:
         total += counts.get("I", 0) * 35
         total += counts.get("J", 0) * 60
         total += counts.get("L", 0) * 90
-        total += counts.get("M", 0) * 15
         total += counts.get("O", 0) * 10
         total += counts.get("R", 0) * 50
         total += counts.get("S", 0) * 30
@@ -95,4 +94,5 @@ class CheckoutSolution:
         total += counts.get("Z", 0) * 50
     
         return total
+
 
