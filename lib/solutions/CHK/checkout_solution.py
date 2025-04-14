@@ -2,7 +2,7 @@ from collections import Counter
 
 class CheckoutSolution:
     def checkout(self, skus):
-
+        
         if not all(c in "ABCD" for c in skus):
             return -1
         
@@ -24,5 +24,6 @@ class CheckoutSolution:
         total += counts["E"] * 40
 
         return total
+
 
 
