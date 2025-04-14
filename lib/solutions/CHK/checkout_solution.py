@@ -7,12 +7,15 @@ class CheckoutSolution:
             return -1
         
         counts = Counter(skus)
-
         total = 0
         
+       # multi-item special offers
+
+       # E's Offer: for every 2 Es, get 1 B for free
         free_b = counts.get("E", 0) // 2
         counts["B"] = max(0, counts.get("B", 0) - free_b)
 
+       # F's Offer: for every 2 Es, get 1 B for free
         payable_f = (f // 3) * 2 + (f % 3)
         total += payable_f * 10
 
