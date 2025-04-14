@@ -16,7 +16,8 @@ class CheckoutSolution:
         remainder_a = a % 5
         total += (a // 5) * 200
         total += (remainder_a // 3) * 130 + (remainder_a % 3) * 50
-
+        
+       # B multi-item special 2B for 45, Standard 30 inlcuded with E's offer below
 
        # H's Offer: 10H for 80, 5H for 45, rmd at 10
         h = counts.get("H", 0)
@@ -40,7 +41,7 @@ class CheckoutSolution:
 
       # "BUY X GET Y FREE" OFFERS
 
-       # E's Offer: 2 Es, 1B free 
+       # E's Offer: 2 Es, 1B free (B multi-item special inlcuded here)
         free_b = counts.get("E", 0) // 2
         b = max(0, counts.get("B", 0) - free_b)
         total += (b // 2) * 45 + (b % 2) * 30
@@ -93,6 +94,7 @@ class CheckoutSolution:
         total += counts.get("Z", 0) * 21
     
         return total
+
 
 
 
