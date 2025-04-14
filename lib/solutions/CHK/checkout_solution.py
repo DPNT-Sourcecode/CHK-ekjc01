@@ -34,6 +34,7 @@ class CheckoutSolution:
         p = counts.get("P", 0)
         total += (p // 5) * 200 + (p % 5) * 50
 
+
        # V's Offer: 3V for 130, 2V for 90, rmd at 50
         v = counts.get("V", 0)
         total += (v // 3) * 130
@@ -71,6 +72,17 @@ class CheckoutSolution:
         payable_u = (u // 4) * 3 + (u % 4)
         total += payable_u * 40
 
+       # buy any 3 of (S,T,X,Y,Z) for 4
+
+        group_items = ["S", "T", "X", "Y", "Z"]
+        group_prices = {
+            "S": 30,
+            "T": 20,
+            "X": 90,
+            "Y": 10,
+            "Z": 50
+        }
+
        # Remaining items at regular price
 
         total += counts.get("C", 0) * 20
@@ -81,16 +93,16 @@ class CheckoutSolution:
         total += counts.get("J", 0) * 60
         total += counts.get("L", 0) * 90
         total += counts.get("O", 0) * 10
-        total += counts.get("W", 0) * 20
-
         total += counts.get("R", 0) * 50
         total += counts.get("S", 0) * 30
         total += counts.get("T", 0) * 20
+        total += counts.get("W", 0) * 20
         total += counts.get("X", 0) * 90
         total += counts.get("Y", 0) * 10
         total += counts.get("Z", 0) * 50
     
         return total
+
 
 
 
