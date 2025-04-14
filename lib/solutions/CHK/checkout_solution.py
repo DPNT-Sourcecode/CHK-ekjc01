@@ -13,6 +13,8 @@ class CheckoutSolution:
         free_b = counts.get("E", 0) // 2
         counts["B"] = max(0, counts.get("B", 0) - free_b)
 
+        payable_f = (f // 3) * 2 + (f % 3)
+        total += payable_f * 10
 
         a = counts.get("A", 0)
         remainder_a = a % 5
@@ -26,10 +28,8 @@ class CheckoutSolution:
         total += counts.get("D", 0) * 15
         total += counts.get("E", 0) * 40
 
-         
         f = counts.get("F", 0)
         payable_f = (f // 3) * 2 + (f % 3)
         total += payable_f * 10
-        
-
+    
         return total
