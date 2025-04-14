@@ -17,7 +17,7 @@ class CheckoutSolution:
         total += (a // 5) * 200
         total += (remainder_a // 3) * 130 + (remainder_a % 3) * 50
         
-       # B multi-item special 2B for 45, Standard 30 inlcuded with E's offer below
+       # B multi-item special 2B for 45, standard at 30 inlcuded with E's offer below
 
        # H's Offer: 10H for 80, 5H for 45, rmd at 10
         h = counts.get("H", 0)
@@ -94,6 +94,7 @@ class CheckoutSolution:
         total += counts.get("Z", 0) * 21
     
         return total
+
 
 
 
