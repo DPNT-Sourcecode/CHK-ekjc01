@@ -68,7 +68,7 @@ class CheckoutSolution:
        # R's Offer: 3R, 1 Q free
         free_q = counts.get("R", 0) // 3
         q = max(0, counts.get("Q", 0) - free_q)
-        total += 0  # already counted in Q 
+        total += q * 30 
 
        # U's Offer: 3U, 1U free
         u = counts.get("U", 0)
@@ -94,6 +94,7 @@ class CheckoutSolution:
         total += counts.get("Z", 0) * 50
     
         return total
+
 
 
 
