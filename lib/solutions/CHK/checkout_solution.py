@@ -63,6 +63,7 @@ class CheckoutSolution:
         free_m = counts.get("N", 0) // 3
         m = max(0, counts.get("M", 0) - free_m)
         total += m * 15
+        total += counts.get("N", 0) * 40
 
        # R's Offer: 3R, 1 Q free
         free_q = counts.get("R", 0) // 3
@@ -74,8 +75,7 @@ class CheckoutSolution:
         payable_u = (u // 4) * 3 + (u % 4)
         total += payable_u * 40
 
-        
-        # Remaining items at regular price
+       # Remaining items at regular price
 
         total += counts.get("C", 0) * 20
         total += counts.get("D", 0) * 15
@@ -94,5 +94,6 @@ class CheckoutSolution:
         total += counts.get("Z", 0) * 50
     
         return total
+
 
 
