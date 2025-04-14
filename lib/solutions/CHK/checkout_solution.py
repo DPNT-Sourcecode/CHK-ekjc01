@@ -10,12 +10,17 @@ class CheckoutSolution:
 
         total = 0
         
-        free_b = counts["E"]
+        free_b = counts["E"] // 2
+        counts["B"] = max(0, counts["B"] - free_b)
 
         total += (counts["A"] // 3) * 130 + (counts["A"] % 3) * 50
+
+        total += []
+        
         total += (counts["B"] // 2) * 45 + (counts["B"] % 2) * 30
         total += counts["C"] * 20
         total += counts["D"] * 15
         total += counts["E"] * 40
 
         return total
+
