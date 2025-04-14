@@ -72,7 +72,7 @@ class CheckoutSolution:
         payable_u = (u // 4) * 3 + (u % 4)
         total += payable_u * 40
 
-       # buy any 3 of (S,T,X,Y,Z) for 4
+       # BUY ANY 3 OF (S,T,X,Y,Z) FOR 45
 
         group_items = ["S", "T", "X", "Y", "Z"]
         group_prices = {
@@ -82,6 +82,20 @@ class CheckoutSolution:
             "Y": 10,
             "Z": 50
         }
+
+        group_pool = []
+        for item in group_items:
+            group_pool += [item] * counts.get(item, 0)
+
+
+            group_pool.sort(key=lambda x: group_prices[x], reverse=True)
+
+
+        while len(group_pool) >= 3:
+             total += 45
+        for _ in range(3):
+            item = group_pool.pop(0)
+            counts[item] -= 1
 
        # Remaining items at regular price
 
@@ -102,8 +116,3 @@ class CheckoutSolution:
         total += counts.get("Z", 0) * 50
     
         return total
-
-
-
-
-
