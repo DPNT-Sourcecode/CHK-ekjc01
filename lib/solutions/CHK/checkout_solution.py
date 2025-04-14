@@ -15,7 +15,11 @@ class CheckoutSolution:
         free_b = counts.get("E", 0) // 2
         counts["B"] = max(0, counts.get("B", 0) - free_b)
 
-       # F's Offer: for every 2 Es, get 1 B for free
+       # F's Offer: for every 3 Fs, get one free
+        f = counts.get("F", 0)
+        payable_f = (f // 3) * 2 + (f % 3)
+        total += payable_f * 10
+
         payable_f = (f // 3) * 2 + (f % 3)
         total += payable_f * 10
 
@@ -27,12 +31,11 @@ class CheckoutSolution:
         b = counts.get("B", 0)
         total += (b // 2) * 45 + (b % 2) * 30
         
+        # Remaining items
+
         total += counts.get("C", 0) * 20
         total += counts.get("D", 0) * 15
         total += counts.get("E", 0) * 40
 
-        f = counts.get("F", 0)
-        payable_f = (f // 3) * 2 + (f % 3)
-        total += payable_f * 10
     
         return total
