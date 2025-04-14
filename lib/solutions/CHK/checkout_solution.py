@@ -87,15 +87,14 @@ class CheckoutSolution:
         for item in group_items:
             group_pool += [item] * counts.get(item, 0)
 
-
-            group_pool.sort(key=lambda x: group_prices[x], reverse=True)
+        group_pool.sort(key=lambda x: group_prices[x], reverse=True)
 
 
         while len(group_pool) >= 3:
              total += 45
-        for _ in range(3):
-            item = group_pool.pop(0)
-            counts[item] -= 1
+             for _ in range(3):
+                item = group_pool.pop(0)
+                counts[item] -= 1
 
        # Remaining items at regular price
 
